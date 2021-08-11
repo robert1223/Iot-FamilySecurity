@@ -7,8 +7,15 @@
 
 ## 技術說明
 - 使用樹梅派(Raspberry Pi 4 Model B)加上紅外線感測器及攝像頭進行家庭監控，並建立LineBot作為通知使用者的App
-- 感應器透過樹梅派的GPIO進行連接，並用Python進行實作
-- 攝像頭拍照的部分是使用Python opencv 開起鏡頭拍照
-- LineBot建立透過Python的line-bot-sdk 進行實作
-- 由於LineBot在傳送圖片時，必須給定網址讓它去requests，才能將圖片傳給使用者，故我使用了flask架設了web server，並透過ngrok做反向代理及內網穿透。
+
+###感應器連接
+- 紅外線感應器是使用GPIO與樹梅派進行連接，將感應器GPIO的三個接頭由左至右(白、灰、黑)分別連接至樹梅派的(5V、Board Pin11(GPIO17)、Ground)
+![S__168542210](https://user-images.githubusercontent.com/78791996/128961926-32ad7927-e507-4523-a27f-66b967208dbe.jpg)
+![擷取](https://user-images.githubusercontent.com/78791996/128961933-1d8e97a7-e882-4350-bbbd-aea347638cc3.PNG)
+- 最後透過pyhton程式碼實作`main.py`
+###物件偵測
+使用Tensorflow Lite 並使用已經pre-train好的Model做為物體辨認
+####傳送訊息
+若物件偵測為人的情況，則會透過Line-bot將訊息傳送給使用者
+
 
