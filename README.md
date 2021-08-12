@@ -37,7 +37,10 @@ sudo apt-get -y install libavcodec-dev libavformat-dev libswscale-dev libv4l-dev
 sudo apt-get -y install libxvidcore-dev libx264-dev
 sudo apt-get -y install qt4-dev-tools libatlas-base-dev
 ```
-- `sudo pip3 install -r requirements.txt` 安裝`requirements.txt`檔案內的相關套件
+-  安裝`requirements.txt`檔案內的相關套件
+```bash
+sudo pip3 install -r requirements.txt
+```
 - 由於預設安裝的tensorflow會出現下圖所顯示的錯誤，我們需重新安裝
 ![image](https://user-images.githubusercontent.com/78791996/129132603-5b1e6eb8-974a-4d5b-a5f6-c0b2bf3104b1.png)
 ```bash
@@ -55,10 +58,14 @@ python3 -m pip uninstall tensorflow
 python3 -m pip install tensorflow-2.0.0-cp37-none-linux_armv7l.whl
 ```
 - 下載並使用Tensorflow Lite已經pre-train好的Model做為物件辨認
-`wget https://storage.googleapis.com/ download.tensorflow.org/models/tflite/coco_ssd_mobilenet_v1_1.0_quant_2018_06_29.zip`
-`unzip coco_ssd_mobilenet_v1_1.0_quant_2018_ 06_29.zip -d Sample_TFLite_model`
+```bash
+wget https://storage.googleapis.com/ download.tensorflow.org/models/tflite/coco_ssd_mobilenet_v1_1.0_quant_2018_06_29.zip
+unzip coco_ssd_mobilenet_v1_1.0_quant_2018_ 06_29.zip -d Sample_TFLite_model
+```
 - 為了加快Tensorflow Lite的執行速度，我們使用`tflite_runtime`的Package
-`sudo pip3 install https://github.com/google-coral/pycoral/releases/download/release-frogfish/tflite_runtime-2.5.0-cp37-cp37m-linux_armv7l.whl`
+```bash
+sudo pip3 install https://github.com/google-coral/pycoral/releases/download/release-frogfish/tflite_runtime-2.5.0-cp37-cp37m-linux_armv7l.whl
+```
 參考網站:https://www.tensorflow.org/lite/guide/python
 
 
