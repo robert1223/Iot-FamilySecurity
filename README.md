@@ -19,7 +19,10 @@
 - 攝像頭的部分我使用Rasberry Pi camera Rev 1.3(2592 × 1944 pixels)
 ![S__168689669](https://user-images.githubusercontent.com/78791996/129122858-6355a788-2c51-4d95-a091-6c4ab7eeca7c.jpg)
 - 安裝步驟如下:
-  - 先將樹梅派關機 `sudo shutdown –h now` 
+  - 先將樹梅派關機
+  ```bash 
+  sudo shutdown –h now
+  ``` 
   - 連接攝像頭
   ![S__168689670](https://user-images.githubusercontent.com/78791996/129126215-477a697d-8961-4c9d-af1d-fecaa99fe469.jpg)
   - 設定攝像頭(Interface Options -> Camera -> enable -> yes) 
@@ -31,7 +34,8 @@
   sudo reboot
   ```  
   - 測試是否可以進行拍照
-  ```bash raspistill -o test.jpg
+  ```bash 
+  raspistill -o test.jpg
   ``` 
 以上基礎設定完成後，接下來安裝相關套件
 #### 套件安裝
