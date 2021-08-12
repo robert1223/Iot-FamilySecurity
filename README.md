@@ -25,10 +25,11 @@
   ``` 
   2. 連接攝像頭
   ![S__168689670](https://user-images.githubusercontent.com/78791996/129126215-477a697d-8961-4c9d-af1d-fecaa99fe469.jpg)
-  - 設定攝像頭(Interface Options -> Camera -> enable -> yes) 
+  - 設定攝像頭
   ```bash
   sudo raspi-config
   ``` 
+  Interface Options -> Camera -> enable -> yes 
   3. 重新啟動樹梅派
   ```bash 
   sudo reboot
