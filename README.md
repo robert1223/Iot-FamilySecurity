@@ -19,27 +19,27 @@
 - 攝像頭的部分我使用Rasberry Pi camera Rev 1.3(2592 × 1944 pixels)
 ![S__168689669](https://user-images.githubusercontent.com/78791996/129122858-6355a788-2c51-4d95-a091-6c4ab7eeca7c.jpg)
 - 安裝步驟如下:
-  - 先將樹梅派關機
+  1. 先將樹梅派關機
   ```bash 
   sudo shutdown –h now
   ``` 
-  - 連接攝像頭
+  2. 連接攝像頭
   ![S__168689670](https://user-images.githubusercontent.com/78791996/129126215-477a697d-8961-4c9d-af1d-fecaa99fe469.jpg)
   - 設定攝像頭(Interface Options -> Camera -> enable -> yes) 
   ```bash
   sudo raspi-config
   ``` 
-  - 重新啟動樹梅派
+  3. 重新啟動樹梅派
   ```bash 
   sudo reboot
   ```  
-  - 測試是否可以進行拍照
+  4. 測試是否可以進行拍照
   ```bash 
   raspistill -o test.jpg
   ``` 
 以上基礎設定完成後，接下來安裝相關套件
 #### 套件安裝
-- 由於我們使用python進行物件偵測需要用到opencv、tensorflow...等套建，故我們會在樹梅派系統預先安裝相關的Packages
+- 我們使用python進行物件偵測需要用到opencv、tensorflow...等套建，故我們會在樹梅派系統預先安裝相關的Packages
 ```bash
 # Get packages required for OpenCV
 
@@ -52,7 +52,7 @@ sudo apt-get -y install qt4-dev-tools libatlas-base-dev
 ```bash
 sudo pip3 install -r requirements.txt
 ```
-- 由於預設安裝的tensorflow會出現下圖所顯示的錯誤，我們需重新安裝
+- 預設安裝的tensorflow會出現下圖所顯示的錯誤，我們需重新安裝
 ![image](https://user-images.githubusercontent.com/78791996/129132603-5b1e6eb8-974a-4d5b-a5f6-c0b2bf3104b1.png)
 ```bash
 # Fix problem
