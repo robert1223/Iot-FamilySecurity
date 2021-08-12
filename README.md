@@ -19,12 +19,12 @@
 - 攝像頭的部分我使用Rasberry Pi camera Rev 1.3(2592 × 1944 pixels)
 ![S__168689669](https://user-images.githubusercontent.com/78791996/129122858-6355a788-2c51-4d95-a091-6c4ab7eeca7c.jpg)
 - 安裝步驟如下:
-  - 1. `sudo shutdown –h now` 先將樹梅派關機
-  - 2. 連接攝像頭
+  - `sudo shutdown –h now` 先將樹梅派關機
+  - 連接攝像頭
   ![S__168689670](https://user-images.githubusercontent.com/78791996/129126215-477a697d-8961-4c9d-af1d-fecaa99fe469.jpg)
-  - 3. `sudo raspi-config` 設定攝像頭(Interface Options -> Camera -> enable -> yes)
-  - 4. `sudo reboot1`  重新啟動樹梅派
-  - 5. `raspistill -o test.jpg` 測試是否可以進行拍照
+  - `sudo raspi-config` 設定攝像頭(Interface Options -> Camera -> enable -> yes)
+  - `sudo reboot1`  重新啟動樹梅派
+  - `raspistill -o test.jpg` 測試是否可以進行拍照
 
 以上基礎設定完成後，接下來安裝相關套件
 #### 套件安裝
@@ -41,6 +41,8 @@ sudo apt-get -y install qt4-dev-tools libatlas-base-dev
 - 由於預設安裝的tensorflow會出現下圖所顯示的錯誤，我們需重新安裝
 ![image](https://user-images.githubusercontent.com/78791996/129132603-5b1e6eb8-974a-4d5b-a5f6-c0b2bf3104b1.png)
 ```bash
+# Fix problem
+
 sudo apt-get install -y libhdf5-dev libc-ares-dev libeigen3-dev
 python3 -m pip install keras_applications==1.0.8 --no-deps
 python3 -m pip install keras_preprocessing==1.1.0 --no-deps
