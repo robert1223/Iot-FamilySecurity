@@ -54,7 +54,7 @@ wget https://github.com/lhelontra/tensorflow-on-arm/releases/download/v2.0.0/ten
 python3 -m pip uninstall tensorflow
 python3 -m pip install tensorflow-2.0.0-cp37-none-linux_armv7l.whl
 ```
-- 使用Tensorflow Lite 並使用已經pre-train好的Model做為物件辨認
+- 下載並使用Tensorflow Lite已經pre-train好的Model做為物件辨認
 `wget https://storage.googleapis.com/ download.tensorflow.org/models/tflite/coco_ssd_mobilenet_v1_1.0_quant_2018_06_29.zip`
 `unzip coco_ssd_mobilenet_v1_1.0_quant_2018_ 06_29.zip -d Sample_TFLite_model`
 - 為了加快Tensorflow Lite的執行速度，我們使用`tflite_runtime`的Package
