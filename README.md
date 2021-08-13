@@ -90,6 +90,10 @@ sudo pip3 install https://github.com/google-coral/pycoral/releases/download/rele
 若物件偵測為人的情況，則會透過Line-bot將訊息傳送給使用者
 
 ### 自動化執行程式
+將所要執行的`main.py`寫成腳本(`GPIO_Run.sh`)，在`/etc/rc.local`加入所要執行的只令，讓樹梅派一開機就可以執行程式，步驟如下:
+- 腳本製作
+```bash
 
+```
 
 
