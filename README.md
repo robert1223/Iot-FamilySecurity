@@ -10,8 +10,8 @@
 
 ### 感應器連接
 - 紅外線感應器是使用GPIO與樹梅派進行連接，將感應器GPIO的三個接頭由左至右(白、灰、黑)分別連接至樹梅派的(5V、Board Pin11(GPIO17)、Ground)
-![S__168542210](https://user-images.githubusercontent.com/78791996/128961926-32ad7927-e507-4523-a27f-66b967208dbe.jpg)
-![擷取](https://user-images.githubusercontent.com/78791996/128961933-1d8e97a7-e882-4350-bbbd-aea347638cc3.PNG)
+![S__168542210](https://user-images.githubusercontent.com/78791996/128961926-32ad7927-e507-4523-a27f-66b967208dbe.jpg)![擷取](https://user-images.githubusercontent.com/78791996/128961933-1d8e97a7-e882-4350-bbbd-aea347638cc3.PNG)
+
 - 最後透過pyhton程式碼實作`main.py`
 
 ### 物件偵測
