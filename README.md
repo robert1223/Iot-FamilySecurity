@@ -43,7 +43,7 @@
 以上基礎設定完成後，接下來安裝相關套件
 
 #### 套件安裝
-- 我們需要用到opencv、tensorflow...等套件，故我們會在樹梅派系統預先安裝相關的Packages
+- 我們需要用到opencv、tensorflow、等套件，故我們會在樹梅派系統預先安裝相關的Packages
 ```bash
 # Get packages required for OpenCV
 
