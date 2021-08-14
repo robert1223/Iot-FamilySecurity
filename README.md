@@ -90,10 +90,25 @@ sudo pip3 install https://github.com/google-coral/pycoral/releases/download/rele
 若物件偵測為人的情況，則會透過Line-bot將訊息傳送給使用者
 
 ### 自動化執行程式
-將所要執行的`main.py`寫成腳本(`GPIO_Run.sh`)，在`/etc/rc.local`加入所要執行的只令，讓樹梅派一開機就可以執行程式，步驟如下:
-- 腳本製作
+將所要執行的`main.py`寫成腳本(`GPIO_Run.sh`)，在`/etc/rc.local`加入所要執行的只令，讓樹梅派一開機就可以執行程式
+- 製作腳本`GPIO_Run.sh`
 ```bash
+touch GPIO_Run.sh
+sudo nano GPIO_Run.sh # cd 到的資料夾名稱請改自己的
+sudo chmod +x GPIO_Run.sh
+```
+由於我們所建立的`GPIO_Run.sh`檔案是屬於DOS格式，當我們執行`./GPIO_Run.sh`無法執行腳本，也就沒有辦法讓它開機自動執行，為了解決這個問題，我們必須將DOS格式轉為UNIX格式
+```bash
+sudo apt update
+sudo apt install -y dos2unix
+sudo dos2unix GPIO_Run.sh
+```
+- 編輯`/etc/rc.local`，加入開機要執行的指令
+```bash
+sudo nano /etc/rc.local
 
+# 在exit 0 前面新增如下程式碼：
+su pi -c "exec /home/pi/GPIO_Run.sh"  # 腳本位置改為自己的
 ```
 
 
