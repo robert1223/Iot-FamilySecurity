@@ -8,7 +8,7 @@ app = Flask(__name__, static_folder='./static', static_url_path='/static')
 # Picture folder
 @app.route("/picture", methods=['GET'])
 def picture():
-    file_path = './static/{}.jpg'.format(request.args.get('FileName'))
+    file_path = 'static/{}.jpg'.format(request.args.get('FileName'))
     return send_file(file_path, mimetype='image/jpg')
     
     
